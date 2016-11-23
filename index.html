@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Ruby on Rails presentation based on Reveal JS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style type="text/css">
+			.reveal section img{ border:0; }
+		</style>
+
+        <link rel="stylesheet" type="text/css" href="lib/css/slick.css"/>
+        // Add the new slick-theme.css if you want the default styling
+        <link rel="stylesheet" type="text/css" href="lib/css/slick-theme.css"/>
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					## Ruby on Rails
+					![ruby](img/ruby.jpg "Ruby")
+				</section>
+				<section data-markdown>
+					## Agenda
+					* Why Ruby?
+					* Why Rails?
+					* Demo webapp
+				</section>
+				<section data-markdown>
+					## Why Ruby?
+
+					* Interpreted language
+					* Easy to learn / steep learning curve
+					* Defined ways of deployment etc.
+					* Clear error messages and debugging
+					* Large community with lots of libraries (gems)
+					* Centralized locations for documentation and libraries
+				</section>
+				<section data-markdown>
+					## Contest: Ruby vs Java (1/2)
+
+					### Ruby
+	File.read('file.txt')
+				</section>
+				<section data-markdown>
+					## Contest: Ruby vs Java (2/2)
+
+					### Java
+	BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+	try {
+		StringBuilder sb = new StringBuilder();
+		String line = br.readLine();
+
+		while (line != null) {
+			sb.append(line);
+			sb.append(System.lineSeparator());
+			line = br.readLine();
+		}
+		String everything = sb.toString();
+	} finally {
+		br.close();
+	}
+				</section>
+				<section data-markdown>
+					## Guess what. We have a winner...
+
+					![ruby](img/epic-win.jpg "Ruby wins")
+				</section>
+				<section data-markdown>
+					## What is Rails?
+
+					Rails is a web application framework designed to work with the Ruby programming language.
+				</section>
+				<section data-markdown>
+					## Why Rails?
+
+					* Built-in ORM (ActiveRecord)
+					* All-in-one
+					* Convention over Configuration
+					* Don't Repeat Yourself (minimal code)
+					* Rails conventions lead to less code and less repetition
+					* Mature
+					* Baked in testing
+				</section>
+				<section>
+					<h2>Usage on famous websites</h2>
+                    <div class="slick-slider">
+                        <div><img src="img/github.png"></div>
+                        <div><img src="img/kickstarter.png"></div>
+                        <div><img src="img/airbnb.png"></div>
+                        <div><img src="img/groupon.png"></div>
+                        <div><img src="img/slideshare.png"></div>
+                    </div>
+                </section>
+                <section data-markdown>
+                    ## Web framework statistics
+                    | Name | Number of sites |
+                    | ---- | ---- |
+                    | ASP.NET       | 42.6 mln |
+                    | PHP           | 41.6 mln |
+                    | J2EE          | 3.5 mln |
+                    | Ruby on Rails | 1.4 mln |
+
+                    <div style="font-size: 14px">https://trends.builtwith.com/framework</div>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				history: true,
+                center: true,
+
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="lib/js/slick.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slick-slider').slick({
+                    autoplaySpeed: 2500,
+                    autoplay: true,
+                    infinite: true
+                });
+            });
+        </script>
+	</body>
+</html>
